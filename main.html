@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>240416</title>
+        <style>
+            div{
+                border: 5px solid black;
+                padding: 20px;
+            }
+            .ancestor{
+                border: 5px solid orange;
+                position: relative;
+            }
+            .parents{
+                border: 5px solid crimson;
+                
+            }
+            .static{
+                border: 5px solid skyblue;
+                background-color: rgba(33, 67, 215, 0.5);
+                position: static;
+                /* 기본 상태 안 움직임 */
+            }
+            
+            .relative{
+                border: 5px solid yellow;
+                background-color: rgba(80, 151, 32, 0.5);
+                position: relative;
+                left: 20px;
+                /* 부모 기준으로 이동 */
+            }
+            .absolute{
+                border: 5px solid green;
+                background-color: rgba(186, 210, 35, 0.5);
+                position: absolute;
+                /* static이 아닌 가장 가까운 조상 위치 기준 */
+            }
+            .fixed{
+                border: 5px solid purple;
+                background-color: rgba(32, 183, 170, 0.5);
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                /* 최상위 태그 위치 기준 */
+                /* 스크롤을 해도 위치가 고정 */
+            }
+            .Bye{
+                height: 500px;
+            }
+            #float{
+                border: 3px dotted chocolate;
+                float: right;
+                width: 8em;
+                height: 100px;
+                margin: 10px;
+            }
+            .card{
+                position: absolute;
+                border: none;
+            }
+            img{
+                position: absolute;
+            }
+            #a{
+                z-index: 1;
+                
+            }
+            #b{
+                z-index: 2;
+                left: 100px;
+                top: 100px;
+            }
+            #c{
+                z-index: 3;
+                left: 200px;
+                top: 200px;
+            }
+            #d{
+                z-index: 4;
+                left: 300px;
+                top: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>position 프로퍼티</h1>
+        <hr>
+        <div>Hello</div>
+        <div class="ancestor">조상
+            <div class="parents">부모
+                <div>hello</div>
+                <div class="static">static</div>
+                <div class="relative">relative</div>
+                <div class="absolute">absolute</div>
+                <div class="fixed">fixed</div>
+                <div>bye</div>
+            </div>
+            <div class="Bye">Bye</div>
+            <hr>
+            <h1>float 띄우기</h1>
+            <hr>
+            <p id="float">다음주 부터 시험이 있습니다.</p>
+            <p>태정태세문단세예성연중인명선광인효현숙경영정순헌철고순태정태세문단세예성연중인명선광인효현숙경영정순헌철고순태정태세문단세예성연중인명선광인효현숙경영정순헌철고순태정태세문단세예성연중인명선광인효현숙경영정순헌철고순태정태세문단세예성연중인명선광인효현숙경영정순헌철고순</p>
+        
+            <hr>
+            <h1>z-index</h1>
+            <hr>
+            <div class="card">
+            <img id="a" src="spade.jpg" width="140" height="200">
+            <img id="b" src="dia.jpg" width="140" height="200">
+            <img id="c" src="clover.jpg" width="140" height="200">
+            <img id="d" src="clover.jpg" width="140" height="200">
+            </div>
+        
+        
+        
+        
+        
+        </div>
+    </body>
+</html>
